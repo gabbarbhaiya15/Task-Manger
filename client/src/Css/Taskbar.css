@@ -1,0 +1,172 @@
+@font-face {
+  font-family: google-font;
+  
+}
+
+.box{
+    width: 500px !important;
+    height: 300px !important;
+    position:absolute    !important;
+    top: 140px !important;
+    left:  450px !important;
+    border-radius: 30px !important;
+   
+    box-shadow:
+  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.017),
+  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.024),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.03),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.036),
+  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.043),
+  100px 100px 80px rgba(0, 0, 0, 0.06)
+;
+
+
+}
+
+#heading{
+    margin-bottom: 10px !important;
+    display: flex !important;
+    justify-content: center !important;
+    font-size: 65px !important;
+    font-weight: 700   ;
+    font-family: googlefont !important;
+    color: white !important;
+    
+
+}
+#input2{
+    width: 350px !important;
+    height: 50px !important;
+   position: relative;
+   left: 63px !important;
+   top: 75px !important;
+   background-image: radial-gradient(circle, #333c3f, #2f3538, #2a2f31, #26282a, #212223);
+    box-shadow:
+  1.5px 0px 2.2px rgba(0, 0, 0, 0.017),
+  3.7px 0px 5.3px rgba(0, 0, 0, 0.024),
+  6.9px 0px 10px rgba(0, 0, 0, 0.03),
+  12.3px 0px 17.9px rgba(0, 0, 0, 0.036),
+  23px 0px 33.4px rgba(0, 0, 0, 0.043),
+  55px 0px 80px rgba(0, 0, 0, 0.06)
+;
+}
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  position: relative;
+  color: white;
+}
+
+.container .label {
+  font-size: 15px;
+  padding-left: 10px;
+  position: absolute;
+  top: 13px;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.input {
+  width: 350px !important;
+  height: 50px !important;
+position: relative !important;
+left: 50px !important;
+top: 35px !important;
+
+
+  border: none;
+  outline: none;
+  padding: 0px 7px;
+  border-radius: 13px;
+  color: #fff;
+  font-size: 15px;
+  background-image: radial-gradient(circle, #333c3f, #2f3538, #2a2f31, #26282a, #212223);
+  box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.input:focus {
+  border: 2px solid transparent;
+  color: #fff;
+  box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4),
+  inset 3px 3px 10px rgba(0,0,0,1),
+  inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.container .input:valid ~ .label,
+.container .input:focus ~ .label {
+  transition: 0.3s;
+  padding-left: 2px;
+  transform: translateY(-35px);
+}
+
+.container .input:valid,
+.container .input:focus {
+  box-shadow: 3px 3px 10px rgba(0,0,0,1),
+  -1px -1px 6px rgba(255, 255, 255, 0.4),
+  inset 3px 3px 10px rgba(0,0,0,1),
+  inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
